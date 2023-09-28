@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "159989112204",
+    "project_id": "easy-voting-app",
+    "storage_bucket": "easy-voting-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159989112204:android:26180825a7ccdff9c4caa9",
+        "android_client_info": {
+          "package_name": "com.isquad.easy_voting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159989112204-k59ld1t5mq1hok891j3qt1p9pn4vb2o0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADKhZHFT2e0nS72ieHQZZOX4RFn9caJ5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159989112204-k59ld1t5mq1hok891j3qt1p9pn4vb2o0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
