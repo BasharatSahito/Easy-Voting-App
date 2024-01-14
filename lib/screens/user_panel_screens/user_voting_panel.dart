@@ -172,6 +172,8 @@ class _UserVotingPanelState extends State<UserVotingPanel> {
                     ),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white),
                       child: const Text("Send OTP"),
                       onPressed: () async {
                         await auth.verifyPhoneNumber(
@@ -205,6 +207,8 @@ class _UserVotingPanelState extends State<UserVotingPanel> {
                     ),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white),
                       child: const Text("Verify OTP"),
                       onPressed: () async {
                         bool otpVerified = await login();

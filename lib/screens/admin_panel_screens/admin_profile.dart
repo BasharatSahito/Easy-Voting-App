@@ -130,6 +130,8 @@ class _AdminProfileState extends State<AdminProfile> {
                                         ListTile(
                                           title: const Text("Settings"),
                                           leading: const CircleAvatar(
+                                              backgroundColor: Colors.indigo,
+                                              foregroundColor: Colors.white,
                                               child: Icon(Icons.settings)),
                                           trailing: const Icon(
                                             Icons.arrow_forward_ios,
@@ -143,6 +145,8 @@ class _AdminProfileState extends State<AdminProfile> {
                                         ListTile(
                                           title: const Text("Voting History"),
                                           leading: const CircleAvatar(
+                                              backgroundColor: Colors.indigo,
+                                              foregroundColor: Colors.white,
                                               child: Icon(Icons.history)),
                                           trailing: const Icon(
                                             Icons.arrow_forward_ios,
@@ -156,6 +160,8 @@ class _AdminProfileState extends State<AdminProfile> {
                                         ListTile(
                                           title: const Text("Sign Out"),
                                           leading: const CircleAvatar(
+                                              backgroundColor: Colors.indigo,
+                                              foregroundColor: Colors.white,
                                               child: Center(
                                                   child: Icon(Icons.logout))),
                                           trailing: const Icon(

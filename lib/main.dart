@@ -17,6 +17,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Easy Voting App',
       theme: ThemeData(
+        elevatedButtonTheme: const ElevatedButtonThemeData(
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.indigo))),
+        appBarTheme: const AppBarTheme(
+          foregroundColor: Colors.white,
+          color: Colors.indigo,
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
         fontFamily: 'Rubik Regular',
         primarySwatch: Colors.indigo,
         scaffoldBackgroundColor: Colors.grey[300],

@@ -34,8 +34,13 @@ class _SignupFingerprintState extends State<SignupFingerprint> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Biometric Verification"),
+        title: const Text(
+          "Biometric Verification",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
+        backgroundColor: Colors.indigo,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Center(
         child: SingleChildScrollView(

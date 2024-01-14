@@ -379,6 +379,8 @@ class _UpdateCandidatesState extends State<UpdateCandidates> {
         ),
         floatingActionButton: widget.isAdmin
             ? FloatingActionButton(
+                backgroundColor: Colors.indigo,
+                foregroundColor: Colors.white,
                 onPressed: () {
                   Navigator.push(
                       context,

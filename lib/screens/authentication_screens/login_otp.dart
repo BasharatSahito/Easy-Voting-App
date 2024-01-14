@@ -67,9 +67,14 @@ class _LoginOtpState extends State<LoginOtp> {
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.indigo,
         title: const Text(
           "Phone Login",
+          style: TextStyle(
+            color: Colors.white,
+          ),
         ),
+        iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
       ),
       body: Center(

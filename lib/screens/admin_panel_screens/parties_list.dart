@@ -259,6 +259,8 @@ class _PartiesListState extends State<PartiesList> {
         ),
         floatingActionButton: _isAdmin
             ? FloatingActionButton(
+                backgroundColor: Colors.indigo,
+                foregroundColor: Colors.white,
                 // Show FloatingActionButton if the user is an admin
                 onPressed: () {
                   Navigator.push(
