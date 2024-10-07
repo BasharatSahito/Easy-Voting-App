@@ -5,7 +5,7 @@ import 'package:syncfusion_flutter_charts/charts.dart' hide LegendPosition;
 import 'package:rxdart/rxdart.dart';
 
 class CheckResults extends StatefulWidget {
-  const CheckResults({Key? key}) : super(key: key);
+  const CheckResults({super.key});
 
   @override
   State<CheckResults> createState() => _CheckResultsState();
@@ -177,23 +177,23 @@ class _CheckResultsState extends State<CheckResults> {
                       height: MediaQuery.of(context).size.height *
                           0.4, // Adjust the height as needed
 
-                      child: SfCartesianChart(
+                      child: const SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
-                          ColumnSeries<ChartData, String>(
-                            dataSource: barChartData,
-                            xValueMapper: (ChartData data, _) => data.partyName,
-                            yValueMapper: (ChartData data, _) =>
-                                data.totalVotes,
-                            dataLabelSettings: const DataLabelSettings(
-                              isVisible: true,
-                            ),
-                            // Set the color for each data point in the series
-                            pointColorMapper: (ChartData data, _) => barColors[
-                                uniqueCategories.indexOf(data.category) %
-                                    barColors.length], // Update this line
-                          ),
-                        ],
+                        // series: <ChartSeries>[
+                        //   ColumnSeries<ChartData, String>(
+                        //     dataSource: barChartData,
+                        //     xValueMapper: (ChartData data, _) => data.partyName,
+                        //     yValueMapper: (ChartData data, _) =>
+                        //         data.totalVotes,
+                        //     dataLabelSettings: const DataLabelSettings(
+                        //       isVisible: true,
+                        //     ),
+                        //     // Set the color for each data point in the series
+                        //     pointColorMapper: (ChartData data, _) => barColors[
+                        //         uniqueCategories.indexOf(data.category) %
+                        //             barColors.length], // Update this line
+                        //   ),
+                        // ],
                       ),
                     ),
                     SizedBox(

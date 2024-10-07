@@ -11,8 +11,8 @@ class UpdateCandidates extends StatefulWidget {
   const UpdateCandidates({
     required this.partyName,
     required this.isAdmin,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<UpdateCandidates> createState() => _UpdateCandidatesState();

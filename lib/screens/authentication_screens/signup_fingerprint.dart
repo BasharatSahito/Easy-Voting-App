@@ -53,67 +53,86 @@ class _SignupFingerprintState extends State<SignupFingerprint> {
                 RoundButton(
                   btnTitle: "Authenticate",
                   onTap: () async {
-                    try {
-                      bool checkingBiometric =
-                          await _localauth.canCheckBiometrics;
-
-                      if (checkingBiometric) {
-                        bool authenticated = await _localauth.authenticate(
-                            localizedReason: "Use Fingerprint to Login");
-                        if (authenticated) {
-                          String role =
-                              await getRole(_fireauth.currentUser!.uid);
-                          if (role == "user") {
-                            // ignore: use_build_context_synchronously
-                            Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const UserHomePage(),
-                                ),
-                                (route) => false);
-                          } else {
-                            // ignore: use_build_context_synchronously
-                            Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AdminHomePage(),
-                                ),
-                                (route) => false);
-                          }
-                        }
-                      } else {
-                        // Device does not support biometrics, prompt user for lock screen password
-                        bool authenticated = await _localauth.authenticate(
-                            localizedReason: "Enter your lock screen password");
-                        if (authenticated) {
-                          String role =
-                              await getRole(_fireauth.currentUser!.uid);
-                          if (role == "user") {
-                            // ignore: use_build_context_synchronously
-                            Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const UserHomePage(),
-                                ),
-                                (route) => false);
-                          } else {
-                            // ignore: use_build_context_synchronously
-                            Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AdminHomePage(),
-                                ),
-                                (route) => false);
-                          }
-                        } else {
-                          Utils().toastMessage("Authentication failed");
-                        }
-                      }
-                    } catch (e) {
-                      setState(() {
-                        auth = false;
-                      });
+                    String role = await getRole(_fireauth.currentUser!.uid);
+                    if (role == "user") {
+                      // ignore: use_build_context_synchronously
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const UserHomePage(),
+                          ),
+                          (route) => false);
+                    } else {
+                      // ignore: use_build_context_synchronously
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AdminHomePage(),
+                          ),
+                          (route) => false);
                     }
+
+                    // try {
+                    //   bool checkingBiometric =
+                    //       await _localauth.canCheckBiometrics;
+                    //
+                    //   if (checkingBiometric) {
+                    //     bool authenticated = await _localauth.authenticate(
+                    //         localizedReason: "Use Fingerprint to Login");
+                    //     if (authenticated) {
+                    //       String role =
+                    //           await getRole(_fireauth.currentUser!.uid);
+                    //       if (role == "user") {
+                    //         // ignore: use_build_context_synchronously
+                    //         Navigator.pushAndRemoveUntil(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //               builder: (context) => const UserHomePage(),
+                    //             ),
+                    //             (route) => false);
+                    //       } else {
+                    //         // ignore: use_build_context_synchronously
+                    //         Navigator.pushAndRemoveUntil(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //               builder: (context) => const AdminHomePage(),
+                    //             ),
+                    //             (route) => false);
+                    //       }
+                    //     }
+                    //   } else {
+                    //     // Device does not support biometrics, prompt user for lock screen password
+                    //     bool authenticated = await _localauth.authenticate(
+                    //         localizedReason: "Enter your lock screen password");
+                    //     if (authenticated) {
+                    //       String role =
+                    //           await getRole(_fireauth.currentUser!.uid);
+                    //       if (role == "user") {
+                    //         // ignore: use_build_context_synchronously
+                    //         Navigator.pushAndRemoveUntil(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //               builder: (context) => const UserHomePage(),
+                    //             ),
+                    //             (route) => false);
+                    //       } else {
+                    //         // ignore: use_build_context_synchronously
+                    //         Navigator.pushAndRemoveUntil(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //               builder: (context) => const AdminHomePage(),
+                    //             ),
+                    //             (route) => false);
+                    //       }
+                    //     } else {
+                    //       Utils().toastMessage("Authentication failed");
+                    //     }
+                    //   }
+                    // } catch (e) {
+                    //   setState(() {
+                    //     auth = false;
+                    //   });
+                    // }
                   },
                 ),
                 const SizedBox(

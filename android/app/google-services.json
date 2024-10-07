@@ -7,12 +7,49 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:159989112204:android:9f3cb6e19af03d7ec4caa9",
+        "android_client_info": {
+          "package_name": "com.example.easy_voting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159989112204-k59ld1t5mq1hok891j3qt1p9pn4vb2o0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADKhZHFT2e0nS72ieHQZZOX4RFn9caJ5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159989112204-k59ld1t5mq1hok891j3qt1p9pn4vb2o0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:159989112204:android:26180825a7ccdff9c4caa9",
         "android_client_info": {
           "package_name": "com.isquad.easy_voting_app"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "159989112204-jdtpqakfdfi6lvf7mfbnbegptgs8srt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isquad.easy_voting_app",
+            "certificate_hash": "ae4e554d3447a515b2727103fc10a37b2a33a4c6"
+          }
+        },
         {
           "client_id": "159989112204-k59ld1t5mq1hok891j3qt1p9pn4vb2o0.apps.googleusercontent.com",
           "client_type": 3

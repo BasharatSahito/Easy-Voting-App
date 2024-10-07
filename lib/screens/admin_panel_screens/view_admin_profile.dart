@@ -110,7 +110,7 @@ class _ViewAdminProfileState extends State<ViewAdminProfile> {
                       ),
                       trailing: TextButton(
                         style: ButtonStyle(
-                          padding: MaterialStateProperty.all(EdgeInsets.zero),
+                          padding: WidgetStateProperty.all(EdgeInsets.zero),
                         ),
                         onPressed: () {
                           showDialog(

@@ -11,7 +11,7 @@ import 'package:local_auth/local_auth.dart';
 import 'package:rxdart/rxdart.dart';
 
 class UserVotingPanel extends StatefulWidget {
-  const UserVotingPanel({Key? key}) : super(key: key);
+  const UserVotingPanel({super.key});
 
   @override
   State<UserVotingPanel> createState() => _UserVotingPanelState();
@@ -392,7 +392,7 @@ class _UserVotingPanelState extends State<UserVotingPanel> {
                       }
                     : null, // Disable the button if results are not enabled
                 style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(0),
+                  elevation: WidgetStateProperty.all(0),
                 ),
                 child: const Text(
                   "Check Results",
@@ -602,11 +602,11 @@ class _UserVotingPanelState extends State<UserVotingPanel> {
                                         }, "No", () {});
                                       },
                                 style: ButtonStyle(
-                                  minimumSize: MaterialStateProperty.all(
+                                  minimumSize: WidgetStateProperty.all(
                                     Size(
                                         screenWidth * 0.4, screenHeight * 0.06),
                                   ),
-                                  shape: MaterialStateProperty.all<
+                                  shape: WidgetStateProperty.all<
                                       RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5),
@@ -615,9 +615,9 @@ class _UserVotingPanelState extends State<UserVotingPanel> {
                                   backgroundColor:
                                       selectedCandidateId == candidateRef.id &&
                                               hasVoted == true
-                                          ? MaterialStateProperty.all<Color>(
+                                          ? WidgetStateProperty.all<Color>(
                                               Colors.green)
-                                          : MaterialStateProperty.all<Color>(
+                                          : WidgetStateProperty.all<Color>(
                                               Colors.grey),
                                 ),
                                 child: selectedCandidateId == candidateRef.id &&

@@ -291,9 +291,8 @@ class _VotersListState extends State<VotersList> {
                                           ),
                                           trailing: TextButton(
                                             style: ButtonStyle(
-                                              padding:
-                                                  MaterialStateProperty.all(
-                                                      EdgeInsets.zero),
+                                              padding: WidgetStateProperty.all(
+                                                  EdgeInsets.zero),
                                             ),
                                             onPressed: () {
                                               showDialog(

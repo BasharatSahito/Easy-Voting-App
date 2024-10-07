@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'dart:math';
 import 'package:awesome_dialog/awesome_dialog.dart';
@@ -14,7 +16,7 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 class AddCandidates extends StatefulWidget {
   final String partyName;
 
-  const AddCandidates({required this.partyName, Key? key}) : super(key: key);
+  const AddCandidates({required this.partyName, super.key});
 
   @override
   State<AddCandidates> createState() => _AddCandidatesState();
@@ -119,7 +121,6 @@ class _AddCandidatesState extends State<AddCandidates> {
         return downloadUrl;
       }
     } catch (e) {
-      // ignore: use_build_context_synchronously
       Alert().dialog(
         context,
         DialogType.error,
@@ -348,7 +349,6 @@ class _AddCandidatesState extends State<AddCandidates> {
                               await checkCityExistsInParty(city, party);
                           if (cityExistsInParty) {
                             // If the city exists, show an error message
-                            // ignore: use_build_context_synchronously
                             Alert().dialog(
                               context,
                               DialogType.error,
@@ -388,7 +388,6 @@ class _AddCandidatesState extends State<AddCandidates> {
                             loading = false;
                           });
 
-                          // ignore: use_build_context_synchronously
                           Alert().dialog(
                             context,
                             DialogType.success,
@@ -401,7 +400,6 @@ class _AddCandidatesState extends State<AddCandidates> {
                             null,
                           );
                         } catch (e) {
-                          // ignore: use_build_context_synchronously
                           Alert().dialog(
                             context,
                             DialogType.success,

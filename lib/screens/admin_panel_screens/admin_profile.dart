@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_voting_app/components/round_button.dart';
 import 'package:easy_voting_app/screens/admin_panel_screens/view_admin_profile.dart';

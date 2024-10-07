@@ -7,7 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class PartiesList extends StatefulWidget {
-  const PartiesList({Key? key}) : super(key: key);
+  const PartiesList({super.key});
 
   @override
   State<PartiesList> createState() => _PartiesListState();

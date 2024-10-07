@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -10,7 +12,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class CreateNewParty extends StatefulWidget {
-  const CreateNewParty({Key? key}) : super(key: key);
+  const CreateNewParty({super.key});
 
   @override
   State<CreateNewParty> createState() => _CreateNewPartyState();
@@ -61,6 +63,7 @@ class _CreateNewPartyState extends State<CreateNewParty> {
     } catch (e) {
       // ignore: use_build_context_synchronously
       Alert().dialog(
+        // ignore: use_build_context_synchronously
         context,
         DialogType.error,
         'Error uploading profile picture: $e',
@@ -225,7 +228,6 @@ class _CreateNewPartyState extends State<CreateNewParty> {
                             loading = false;
                           });
 
-                          // ignore: use_build_context_synchronously
                           Alert().dialog(
                             context,
                             DialogType.success,
@@ -238,7 +240,6 @@ class _CreateNewPartyState extends State<CreateNewParty> {
                             null,
                           );
                         } catch (e) {
-                          // ignore: use_build_context_synchronously
                           Alert().dialog(
                             context,
                             DialogType.success,

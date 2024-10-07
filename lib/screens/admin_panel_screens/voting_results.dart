@@ -18,7 +18,7 @@ class Candidate {
 }
 
 class VotingResults extends StatefulWidget {
-  const VotingResults({Key? key}) : super(key: key);
+  const VotingResults({super.key});
 
   @override
   State<VotingResults> createState() => _VotingResultsState();
@@ -301,18 +301,18 @@ class _VotingResultsState extends State<VotingResults> {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: SfCartesianChart(
                           primaryXAxis: CategoryAxis(
                             labelRotation: 90,
-                            labelStyle: const TextStyle(
+                            labelStyle: TextStyle(
                               fontFamily: 'Roboto',
                               fontWeight: FontWeight.w500,
                             ),
                             title: AxisTitle(
                               text: 'Political Parties',
-                              textStyle: const TextStyle(
+                              textStyle: TextStyle(
                                 fontFamily: 'Roboto',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
@@ -320,31 +320,31 @@ class _VotingResultsState extends State<VotingResults> {
                             ),
                           ),
                           primaryYAxis: CategoryAxis(
-                            labelStyle: const TextStyle(
+                            labelStyle: TextStyle(
                               fontFamily: 'Roboto',
                               fontWeight: FontWeight.w500,
                             ),
                             title: AxisTitle(
                               text: 'Votes',
-                              textStyle: const TextStyle(
+                              textStyle: TextStyle(
                                 fontFamily: 'Roboto',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
-                          series: <ChartSeries>[
-                            ColumnSeries<Map<String, dynamic>, String>(
-                              dataSource: barData,
-                              xValueMapper: (Map<String, dynamic> data, _) =>
-                                  data['party'] as String,
-                              yValueMapper: (Map<String, dynamic> data, _) =>
-                                  data['votes'] as num,
-                              pointColorMapper:
-                                  (Map<String, dynamic> data, index) =>
-                                      barColors[index % barColors.length],
-                            ),
-                          ],
+                          // series: <ChartSeries>[
+                          //   ColumnSeries<Map<String, dynamic>, String>(
+                          //     dataSource: barData,
+                          //     xValueMapper: (Map<String, dynamic> data, _) =>
+                          //         data['party'] as String,
+                          //     yValueMapper: (Map<String, dynamic> data, _) =>
+                          //         data['votes'] as num,
+                          //     pointColorMapper:
+                          //         (Map<String, dynamic> data, index) =>
+                          //             barColors[index % barColors.length],
+                          //   ),
+                          // ],
                         ),
                       ),
                       Padding(

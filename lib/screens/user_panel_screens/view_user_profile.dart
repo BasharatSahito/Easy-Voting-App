@@ -131,7 +131,7 @@ class _ViewUserProfileState extends State<ViewUserProfile> {
                       ),
                       trailing: TextButton(
                         style: ButtonStyle(
-                          padding: MaterialStateProperty.all(EdgeInsets.zero),
+                          padding: WidgetStateProperty.all(EdgeInsets.zero),
                         ),
                         onPressed: () {
                           showDialog(

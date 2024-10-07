@@ -9,7 +9,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class OldUserVotingPanel extends StatefulWidget {
-  const OldUserVotingPanel({Key? key}) : super(key: key);
+  const OldUserVotingPanel({super.key});
 
   @override
   State<OldUserVotingPanel> createState() => _OldUserVotingPanelState();
@@ -94,7 +94,7 @@ class _OldUserVotingPanelState extends State<OldUserVotingPanel> {
                   );
                 },
                 style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(0),
+                  elevation: WidgetStateProperty.all(0),
                 ),
                 child: const Text(
                   "Check Results",
@@ -215,12 +215,11 @@ class _OldUserVotingPanelState extends State<OldUserVotingPanel> {
                                               }
                                             : null,
                                         style: ButtonStyle(
-                                          minimumSize:
-                                              MaterialStateProperty.all(
+                                          minimumSize: WidgetStateProperty.all(
                                             Size(screenWidth * 0.5,
                                                 screenHeight * 0.06),
                                           ),
-                                          shape: MaterialStateProperty.all<
+                                          shape: WidgetStateProperty.all<
                                               RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
                                               borderRadius:
@@ -231,7 +230,7 @@ class _OldUserVotingPanelState extends State<OldUserVotingPanel> {
                                               selectedCandidateId ==
                                                           candidateId &&
                                                       hasVoted == true
-                                                  ? MaterialStateProperty.all<
+                                                  ? WidgetStateProperty.all<
                                                       Color>(Colors.green)
                                                   : null,
                                         ),

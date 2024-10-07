@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_voting_app/components/alert_box.dart';
@@ -97,6 +99,7 @@ class _AdminVotingPanelState extends State<AdminVotingPanel> {
                   });
                 });
 
+                // ignore: duplicate_ignore
                 // ignore: use_build_context_synchronously
                 Alert().dialog(
                     context,
@@ -110,7 +113,7 @@ class _AdminVotingPanelState extends State<AdminVotingPanel> {
               // Reset voting status for all users
             },
             style: ButtonStyle(
-              elevation: MaterialStateProperty.all(0),
+              elevation: WidgetStateProperty.all(0),
             ),
             child: const Text(
               "Reset Voting",

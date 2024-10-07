@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class MainLogo extends StatelessWidget {
   const MainLogo({
-    Key? key,
+    super.key,
     required this.whiteLogo,
-  }) : super(key: key);
+  });
 
   final bool whiteLogo;
 
